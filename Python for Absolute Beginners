@@ -1,0 +1,273 @@
+Python for absolute beginners
+
+-	Untuk install python dalam windows – type: python -m pip install
+-	IDE – Integrated Development Environment
+
+Int
+>>> int ("6") + int ("5")
+        11
+>>> 6 + 5
+       11
+String
+>>> “5” + “6”
+        56
+String – “ “, ‘ ‘
+
+Gabung dua ayat
+error
+>>>"This cost" + 6 + "Bucks"
+Correct
+>>>"This cost" + str(6) + "Bucks"
+
+Pisah ayat
+
+>>> "Hello: Nick: World".split(":")
+['Hello', ' Nick ', ' World']
+>>> "My name is " + "Hello: Nick : World".split(":") [1]
+'My name is  Nick '
+
+Boolean
+>>>True
+True
+>>> 5 == 5
+True
+>>> True is True
+True
+>>> "True" is True
+False
+>>> "True" is str(True)
+True
+
+List [ ]
+>>> ["Movies", "Games", "Aida"]
+['Movies', 'Games', 'Aida']
+-list with 3 indexs
+>>> ["Movies", "Games", "Aida"] [1]
+'Games'
+>>> print ("I like" + ["Movies", "Games", "Aida"] [2])
+I likeAida
+>>> print ("I like" + ["Movies", "22", "Aida"] [1])
+I like22
+
+Dictionaries { }
+>>> {"name": "Nick", "Age": 27, "Hobby": "code"}
+{'name': 'Nick', 'Age': 27, 'Hobby': 'code'}
+>>> {"name": "Nick", "Age": 27, "Hobby": "code"}['Age']
+27
+
+Build in function
+>>> print ("Hi")
+Hi
+>>> str (5)
+'5'
+>> str (5.6)
+'5.6'
+>>> str (True)
+'True'
+>>> int ("5")
+5
+>>> float ("5.7")
+5.7
+>>> bool ("True")
+True
+>>> len ("Annyeong")
+8
+>>> len ([1,2,3,4,5,6])
+6
+>>> len (["aida", "yana"])
+2
+
+Defined function
+
+def my_function ():
+-def – define function
+-my_function – name of the function
+-() – parameter of the function
+
+def my_function():
+    print ("This is mine!")
+    print ("You too")
+
+my_function()
+
+Argument
+def my_function(str1, str2):
+    print (str1)
+    print (str2)
+
+my_function(" This is me", "Im the problem")
+my_function("Hi", "My name is yvonne")
+
+def print_next(name,age):
+    print("My name is" + name + "and my age is" + str(age))
+
+print_next(" aida ",23)
+age kena ada string sbb dia bukan int
+
+def print_next(name,age):
+    print("My name is" , name , "and my age is" , age)
+
+print_next(" aida ",23)
+My name is  aida  and my age is 23
+yang ni xperlu tulis str sbb dia comma
+
+#argument
+def print_next(name = "Somenone",age = "Unknown"):
+    print("My name is" , name , "and my age is" , age)
+print_next(" aida ")
+My name is  aida  and my age is Unknown
+
+#argument
+def print_next(name = "Someone",age = "Unknown"):
+    print("My name is" , name , "and my age is" , age)
+print_next(27)
+My name is 27 and my age is Unknown
+-salah
+
+#argument
+def print_next(name = "Someone",age = "Unknown"):
+    print("My name is" , name , "and my age is" , age)
+print_next(age =27)
+My name is Someone and my age is 27
+-btul
+#argument (betul)
+def print_next(name = "Someone",age = "Unknown"):
+    print("My name is" , name , "and my age is" , age)
+print_next(age =27, name="mira")
+My name is mira and my age is 27
+-wpun kedudukan lain, blh baca
+
+# guna * dimana ia bagitahu yang argument tu adalah array untuk smua argument dlm fx
+def print_people(*people):
+    for person in people:
+        print("This person is", person)
+
+print_people("Nick","Dan", "Jack", "King", "Smiley")
+This person is Nick
+This person is Dan
+This person is Jack
+This person is King
+This person is Smiley
+-Dia baca smua nama tu
+#return values
+def do_math(num1, num2):
+    return num1+num2
+
+math1 = do_math(5, 6)
+math2 = do_math(11,11)
+
+print("First sum is", math1,"and the second sum is", math2)
+First sum is 11 and the second sum is 22
+-dia kira total dia. Macam code argument tadi
+
+If else
+#if-else statement
+check = "Hamburger"
+if check == False:
+    print("It is false")
+elif check == "Hamburger":
+    print("Yeayyy,burger")
+elif check =="Yo":
+    print("Holla")
+else:
+    print("It is actually equal to True")
+Yeayyy,burger
+-klu sama dngn check tu, dia akan print apa yg dicheck tu. Klu x..dia print else
+Loops
+#Loops
+numbers =[1,2,3,4,5]
+for item in numbers:
+    print(item)
+1
+2
+3
+4
+5
+-dia print smua
+
+#Loops
+numbers =["Aida","Mae", "Aimy", "Maya", 2]
+for item in numbers:
+    print("this is",item)
+this is Aida
+this is Mae
+this is Aimy
+this is Maya
+this is 2
+-numbers =array for the list
+-item = bnda yang kita nk panggil
+
+#while
+run = True
+current = 1
+while run:
+    if current == 10:
+        run = False
+    else:
+        print(current)
+        current +=1
+-	Dia akan print : 1,2,3,4,5,6,7,8,9
+-	Dia skrng 1, so dia tngok bukan 10, so dia g dkt else. Pstu dkt else, dia increment 1 stiap kali dia lalu, so nom dia dr 1 tadi dh jd 2 and so on. Bila dh smpi 10, dia stop loop tu
+
+string = "'I AM OK'.she said"
+print(string)
+'I AM OK'.she said
+new = re.sub('[A-Z]','', string)
+print(string)
+'I AM OK'.she said
+print(new)
+'  '.she said
+string = string + "iiiii"
+print(string)
+'I AM OK'.she saidiiiii
+
+-	Blh tambah string
+-	Boleh remove huruf kita tak nak guna re.sub
+
+
+Final Project (Calculator)
+
+import re
+
+print("Our Magical Calculator")
+print("Type 'quit' to exit\n")
+
+#hold the result fo the previous calculated equation
+previous = 0
+run = True
+
+#define function
+def performMath():
+    #kita masukkan global, and nama global variabke (run) yang kita try nak access
+    global run
+    #grab access from previous global variable
+    global previous
+    equation = ""
+    if previous == 0:
+       equation = input ("Enter equation:")
+    else:
+       equation = input(str(previous))
+
+
+    if equation == 'quit':
+        print("Thank you")
+        run = False
+    else:
+        #masukkan variable baru untuk exclude bnda slain nom sbb takut eval evaluate smua
+        equation = re.sub('[a-zA-Z,.:()" "]', '', equation)
+
+        if previous == 0:
+            # eval tu guna utk kira kita punya math
+            previous = eval(equation)
+        else:
+            previous = eval(str(previous) + equation)
+
+
+while run:
+    performMath()
+
+
+
+
+
+
