@@ -8,6 +8,9 @@ link: https://docs.google.com/document/d/1BF9bD4EDXOKffAhJVpifKH4krQ6q1sEi/edit?
 ### Webinar for Threat Hunting by TrustedSec
 link: https://docs.google.com/document/d/1E-b_xJcAjVn4syBSHpJigviMjSPz6XzA/edit?usp=sharing&ouid=103275889564133119729&rtpof=true&sd=true
 
+### Simple Security Concept
+link: https://docs.google.com/document/d/10EmjQAIwjV_3-HfyejDpg6XTGHd0IJw_/edit?usp=sharing&ouid=103275889564133119729&rtpof=true&sd=true
+
 
 
 
